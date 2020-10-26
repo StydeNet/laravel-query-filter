@@ -260,6 +260,7 @@ If you discover any security related issues, please email luilliarcec@gmail.com 
 
 ## Credits
 
+- [Duilio Palacios.](https://github.com/sileence)
 - [Luis Andrés Arce C.](https://github.com/luilliarcec)
 - [All Contributors](../../contributors)
 
