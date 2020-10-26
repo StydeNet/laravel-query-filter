@@ -1,10 +1,10 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Tests\Models;
+namespace Styde\QueryFilter\Tests\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Styde\LaravelQueryFilter\Tests\Filters\UserFilter;
-use Styde\LaravelQueryFilter\Tests\Queries\UserQuery;
+use Styde\QueryFilter\Tests\Filters\UserFilter;
+use Styde\QueryFilter\Tests\Queries\UserQuery;
 
 class User extends Model
 {

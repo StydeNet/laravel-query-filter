@@ -1,8 +1,8 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Tests\Queries;
+namespace Styde\QueryFilter\Tests\Queries;
 
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class UserQuery extends QueryBuilder
 {

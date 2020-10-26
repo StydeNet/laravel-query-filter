@@ -1,8 +1,8 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Tests;
+namespace Styde\QueryFilter\Tests;
 
-use Styde\LaravelQueryFilter\LaravelQueryFilterServiceProvider;
+use Styde\QueryFilter\QueryFilterServiceProvider;
 use Orchestra\Testbench\Concerns\WithLoadMigrationsFrom;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -34,7 +34,7 @@ class TestCase extends Orchestra
      */
     protected function getPackageProviders($app)
     {
-        return [LaravelQueryFilterServiceProvider::class];
+        return [QueryFilterServiceProvider::class];
     }
 
     /**

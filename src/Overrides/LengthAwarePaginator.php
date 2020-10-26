@@ -1,9 +1,9 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Overrides;
+namespace Styde\QueryFilter\Overrides;
 
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
-use Styde\LaravelQueryFilter\Traits\Sortable;
+use Styde\QueryFilter\Traits\Sortable;
 
 class LengthAwarePaginator extends Paginator
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Tests\Units;
+namespace Styde\QueryFilter\Tests\Units;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
-use Styde\LaravelQueryFilter\Tests\TestCase;
+use Styde\QueryFilter\Tests\TestCase;
 
 class CommandsTest extends TestCase
 {

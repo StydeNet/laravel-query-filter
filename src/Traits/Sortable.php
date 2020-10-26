@@ -1,6 +1,6 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Traits;
+namespace Styde\QueryFilter\Traits;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;

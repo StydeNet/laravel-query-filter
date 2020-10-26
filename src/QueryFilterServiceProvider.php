@@ -1,13 +1,13 @@
 <?php
 
-namespace Styde\LaravelQueryFilter;
+namespace Styde\QueryFilter;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\ServiceProvider;
-use Styde\LaravelQueryFilter\Commands\FilterMakeCommand;
-use Styde\LaravelQueryFilter\Commands\QueryMakeCommand;
+use Styde\QueryFilter\Commands\FilterMakeCommand;
+use Styde\QueryFilter\Commands\QueryMakeCommand;
 
-class LaravelQueryFilterServiceProvider extends ServiceProvider
+class QueryFilterServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -30,7 +30,7 @@ class LaravelQueryFilterServiceProvider extends ServiceProvider
             ], 'config');
         }
 
-        $this->app->bind(LengthAwarePaginator::class, \Styde\LaravelQueryFilter\Overrides\LengthAwarePaginator::class);
+        $this->app->bind(LengthAwarePaginator::class, \Styde\QueryFilter\Overrides\LengthAwarePaginator::class);
     }
 
     /**

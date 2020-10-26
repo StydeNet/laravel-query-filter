@@ -1,11 +1,11 @@
 <?php
 
-namespace Styde\LaravelQueryFilter;
+namespace Styde\QueryFilter;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Styde\LaravelQueryFilter\Traits\Sortable;
+use Styde\QueryFilter\Traits\Sortable;
 
 abstract class AbstractFilter
 {

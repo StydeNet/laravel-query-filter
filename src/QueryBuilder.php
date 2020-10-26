@@ -1,6 +1,6 @@
 <?php
 
-namespace Styde\LaravelQueryFilter;
+namespace Styde\QueryFilter;
 
 use BadMethodCallException;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;

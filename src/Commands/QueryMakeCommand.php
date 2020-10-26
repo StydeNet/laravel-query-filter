@@ -1,6 +1,6 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Commands;
+namespace Styde\QueryFilter\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 

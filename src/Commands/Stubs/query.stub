@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class DummyClass extends QueryBuilder
 {

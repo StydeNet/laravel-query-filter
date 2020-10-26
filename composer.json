@@ -1,8 +1,10 @@
 {
-    "name": "styde/laravel-query-filter",
+    "name": "styde/query-filter",
     "description": "Apply filters to your queries using eloquent.",
     "keywords": [
-        "laravel-query-filter"
+        "query-filter",
+        "laravel",
+        "eloquent"
     ],
     "homepage": "https://github.com/StydeNet/laravel-query-filter",
     "license": "MIT",
@@ -24,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Styde\\LaravelQueryFilter\\": "src"
+            "Styde\\QueryFilter\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Styde\\LaravelQueryFilter\\Tests\\": "tests"
+            "Styde\\QueryFilter\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Styde\\LaravelQueryFilter\\LaravelQueryFilterServiceProvider"
+                "Styde\\QueryFilter\\QueryFilterServiceProvider"
             ]
         }
     }

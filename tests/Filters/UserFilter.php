@@ -1,9 +1,9 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Tests\Filters;
+namespace Styde\QueryFilter\Tests\Filters;
 
-use Styde\LaravelQueryFilter\AbstractFilter;
-use Styde\LaravelQueryFilter\Tests\Queries\UserQuery;
+use Styde\QueryFilter\AbstractFilter;
+use Styde\QueryFilter\Tests\Queries\UserQuery;
 
 class UserFilter extends AbstractFilter
 {

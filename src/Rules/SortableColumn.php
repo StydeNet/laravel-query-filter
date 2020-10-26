@@ -1,9 +1,9 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Rules;
+namespace Styde\QueryFilter\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Styde\LaravelQueryFilter\Traits\Sortable;
+use Styde\QueryFilter\Traits\Sortable;
 
 class SortableColumn implements Rule
 {

@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Styde\LaravelQueryFilter\AbstractFilter;
+use Styde\QueryFilter\AbstractFilter;
 
 class DummyClass extends AbstractFilter
 {

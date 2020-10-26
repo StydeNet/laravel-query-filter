@@ -1,10 +1,10 @@
 <?php
 
-namespace Styde\LaravelQueryFilter\Tests\Units;
+namespace Styde\QueryFilter\Tests\Units;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Styde\LaravelQueryFilter\Tests\Models\User;
-use Styde\LaravelQueryFilter\Tests\TestCase;
+use Styde\QueryFilter\Tests\Models\User;
+use Styde\QueryFilter\Tests\TestCase;
 
 class FilterTest extends TestCase
 {
