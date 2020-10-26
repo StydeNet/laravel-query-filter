@@ -11,7 +11,7 @@ class QueryTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function using_a_single_query_method()
+    public function check_what_is_searched_by_email_with_the_userquery_functions()
     {
         $user = User::query()->create(['name' => 'Luis', 'email' => 'luis@email.com']);
         User::query()->create(['name' => 'Styde', 'email' => 'styde@email.com']);
@@ -20,15 +20,20 @@ class QueryTest extends TestCase
     }
 
     /** @test */
-    public function using_a_multiple_query_method()
+    public function check_that_it_is_filtered_by_the_prefix_email_or_name_with_the_userquery_functions()
     {
         User::query()->create(['name' => 'Luis', 'email' => 'luis@email.com']);
-        User::query()->create(['name' => 'styde admin', 'email' => 'admin@styde.com']);
+        User::query()->create(['name' => 'Duilio', 'email' => 'admin@styde.com']);
         User::query()->create(['name' => 'styde support', 'email' => 'support@styde.com']);
 
-        $this->assertTrue(
-            User::query()->filterByPrefixEmail('styde')
-                ->filterByOrName('styde')->count() == 2
+        $this->assertNotContains('luis@email.com',
+            User::query()->filterByPrefixEmail('styde.com')
+                ->filterByOrName('styde')->get()->pluck('email')->toArray()
+        );
+
+        $this->assertNotContains('Luis',
+            User::query()->filterByPrefixEmail('styde.com')
+                ->filterByOrName('styde')->get()->pluck('name')->toArray()
         );
     }
 }

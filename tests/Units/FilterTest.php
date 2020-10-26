@@ -11,12 +11,18 @@ class FilterTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function applying_query_filters()
+    public function applying_filters_by_name()
     {
         User::query()->create(['name' => 'Luis', 'email' => 'luis@email.com']);
         User::query()->create(['name' => 'Carlos', 'email' => 'carlos@email.com']);
         User::query()->create(['name' => 'Andrés Luis', 'email' => 'LuisAndres@email.com']);
 
-        $this->assertTrue(User::query()->applyFilters(null, ['search' => 'Luis'])->count() == 2);
+        $this->assertContains('Luis',
+            User::query()->applyFilters(null, ['search' => 'Luis'])->get()->pluck('name')->toArray()
+        );
+
+        $this->assertNotContains('Carlos',
+            User::query()->applyFilters(null, ['search' => 'Luis'])->get()->pluck('name')->toArray()
+        );
     }
 }
