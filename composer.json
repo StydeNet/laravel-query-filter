@@ -11,6 +11,11 @@
     "type": "library",
     "authors": [
         {
+            "name": "Duilio Palacios.",
+            "email": "duilio@styde.net",
+            "role": "Developer"
+        },
+        {
             "name": "Luis Andrés Arce C.",
             "email": "luilliarcec@gmail.com",
             "role": "Developer"
