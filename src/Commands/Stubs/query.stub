@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Styde\LaravelQueryFilter\QueryBuilder;
+
+class DummyClass extends QueryBuilder
+{
+    //
+}
