@@ -5,12 +5,6 @@ vendor
 coverage
 .phpunit.result.cache
 
-# CMake
-cmake-build-*/
-
-# Mongo Explorer plugin
-.idea/**/mongoSettings.xml
-
 # File-based project format
 *.iws
 
@@ -34,15 +28,7 @@ fabric.properties
 # See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
 
 .idea/
-
-# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
-
 *.iml
 modules.xml
 .idea/misc.xml
 *.ipr
-
-# Sonarlint plugin
-.idea/sonarlint
-
-# End of https://www.gitignore.io/api/jetbrains+all
