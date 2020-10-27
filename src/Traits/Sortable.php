@@ -38,17 +38,6 @@ trait Sortable
     }
 
     /**
-     * Build Sortable Url
-     *
-     * @param $order
-     * @return string
-     */
-    protected function buildSortableUrl($order)
-    {
-        return url()->current() . '?' . Arr::query(array_merge($this->query, ['order' => $order]));
-    }
-
-    /**
      * Get css class
      *
      * @param $column
@@ -65,6 +54,17 @@ trait Sortable
         }
 
         return config('query-filter.icons.sort');
+    }
+
+    /**
+     * Build Sortable Url
+     *
+     * @param $order
+     * @return string
+     */
+    protected function buildSortableUrl($order)
+    {
+        return url()->current() . '?' . Arr::query(array_merge($this->query, ['order' => $order]));
     }
 
     /**
