@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 use Styde\QueryFilter\Tests\Filters\UserFilter;
 use Styde\QueryFilter\Tests\Queries\UserQuery;
 
+/**
+ * @method static create(array $attributes = []): Illuminate\Database\Eloquent\Model|$this
+ */
 class User extends Model
 {
     /**

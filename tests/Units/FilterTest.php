@@ -13,9 +13,9 @@ class FilterTest extends TestCase
     /** @test */
     public function applying_filters_by_name()
     {
-        User::query()->create(['name' => 'Luis', 'email' => 'luis@email.com']);
-        User::query()->create(['name' => 'Carlos', 'email' => 'carlos@email.com']);
-        User::query()->create(['name' => 'Andrés Luis', 'email' => 'LuisAndres@email.com']);
+        User::create(['name' => 'Luis', 'email' => 'luis@email.com']);
+        User::create(['name' => 'Carlos', 'email' => 'carlos@email.com']);
+        User::create(['name' => 'Andrés Luis', 'email' => 'LuisAndres@email.com']);
 
         $this->assertContains('Luis',
             User::query()->applyFilters(null, ['search' => 'Luis'])->get()->pluck('name')->toArray()

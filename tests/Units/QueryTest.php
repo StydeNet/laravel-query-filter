@@ -13,8 +13,8 @@ class QueryTest extends TestCase
     /** @test */
     public function check_what_is_searched_by_email_with_the_userquery_functions()
     {
-        $user = User::query()->create(['name' => 'Luis', 'email' => 'luis@email.com']);
-        User::query()->create(['name' => 'Styde', 'email' => 'styde@email.com']);
+        $user = User::create(['name' => 'Luis', 'email' => 'luis@email.com']);
+        User::create(['name' => 'Styde', 'email' => 'styde@email.com']);
 
         $this->assertEquals($user->getKey(), User::query()->findByEmail('luis@email.com')->getKey());
     }
@@ -22,9 +22,9 @@ class QueryTest extends TestCase
     /** @test */
     public function check_that_it_is_filtered_by_the_prefix_email_or_name_with_the_userquery_functions()
     {
-        User::query()->create(['name' => 'Luis', 'email' => 'luis@email.com']);
-        User::query()->create(['name' => 'Duilio', 'email' => 'admin@styde.com']);
-        User::query()->create(['name' => 'styde support', 'email' => 'support@styde.com']);
+        User::create(['name' => 'Luis', 'email' => 'luis@email.com']);
+        User::create(['name' => 'Duilio', 'email' => 'admin@styde.com']);
+        User::create(['name' => 'styde support', 'email' => 'support@styde.com']);
 
         $this->assertNotContains('luis@email.com',
             User::query()->filterByPrefixEmail('styde.com')
