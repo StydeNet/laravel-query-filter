@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Styde\QueryFilter\Overrides\LengthAwarePaginator;
 use Styde\QueryFilter\Tests\Models\User;
 use Styde\QueryFilter\Tests\TestCase;
-use Styde\QueryFilter\Traits\Sortable;
+use Styde\QueryFilter\Concerns\Sortable;
 
 class SortableTest extends TestCase
 {

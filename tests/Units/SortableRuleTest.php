@@ -7,7 +7,7 @@ use Styde\QueryFilter\Overrides\LengthAwarePaginator;
 use Styde\QueryFilter\Rules\SortableColumn;
 use Styde\QueryFilter\Tests\Models\User;
 use Styde\QueryFilter\Tests\TestCase;
-use Styde\QueryFilter\Traits\Sortable;
+use Styde\QueryFilter\Concerns\Sortable;
 
 class SortableRuleTest extends TestCase
 {

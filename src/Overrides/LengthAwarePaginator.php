@@ -3,7 +3,7 @@
 namespace Styde\QueryFilter\Overrides;
 
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;
-use Styde\QueryFilter\Traits\Sortable;
+use Styde\QueryFilter\Concerns\Sortable;
 
 class LengthAwarePaginator extends Paginator
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Styde\QueryFilter\Traits;
+namespace Styde\QueryFilter\Concerns;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
