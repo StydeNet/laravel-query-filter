@@ -5,7 +5,7 @@ namespace Styde\QueryFilter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
-use Styde\QueryFilter\Concerns\Sortable;
+use Styde\QueryFilter\Support\Sortable;
 
 abstract class AbstractFilter
 {
