@@ -1,11 +1,11 @@
 # Laravel Query Filter
 
+![](https://github.com/StydeNet/enlighten/workflows/run-tests/badge.svg)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/styde/laravel-query-filter.svg?style=flat-square)](https://packagist.org/packages/styde/laravel-query-filter)
-[![Build Status](https://img.shields.io/travis/styde/laravel-query-filter/master.svg?style=flat-square)](https://travis-ci.org/styde/laravel-query-filter)
 [![Quality Score](https://img.shields.io/scrutinizer/g/styde/laravel-query-filter.svg?style=flat-square)](https://scrutinizer-ci.com/g/styde/laravel-query-filter)
 [![Total Downloads](https://img.shields.io/packagist/dt/styde/laravel-query-filter.svg?style=flat-square)](https://packagist.org/packages/styde/laravel-query-filter)
 
-This is a package that was born in styde.net, my job was just to adapt said logic to make it a package and add some salt to improve it a bit.
+Let your users filter your database queries in a safe and easy way.
 
 ## Installation
 
@@ -256,7 +256,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email luilliarcec@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please email admin@styde.net and luilliarcec@gmail.com instead of using the issue tracker.
 
 ## Credits
 
