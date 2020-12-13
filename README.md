@@ -41,7 +41,7 @@ This command will create a php file named User Query with the following structur
 
 namespace App\Queries;
 
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class UserQuery extends QueryBuilder
 {
@@ -62,7 +62,7 @@ This command will create a php file named User Filter with the following structu
 
 namespace App\Filters;
 
-use Styde\LaravelQueryFilter\AbstractFilter;
+use Styde\QueryFilter\AbstractFilter;
 
 class UserFilter extends AbstractFilter
 {
@@ -117,7 +117,7 @@ or
 namespace App\Models;
 
 use App\Filters\UserFilter;
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class User extends Authenticatable
 {
@@ -146,7 +146,7 @@ Once this is done, we are going to create a basic query filter and a basic query
 
 namespace App\Queries;
 
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class UserQuery extends QueryBuilder
 {
@@ -174,7 +174,7 @@ Normally the filters are applied when we make a list of records, commonly the in
 
 namespace App\Filters;
 
-use Styde\LaravelQueryFilter\AbstractFilter;
+use Styde\QueryFilter\AbstractFilter;
 
 class UserFilter extends AbstractFilter
 {
