@@ -34,7 +34,7 @@ class QueryMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . '/Stubs/query.stub';
+        return __DIR__ . '/stubs/query.stub';
     }
 
     /**
