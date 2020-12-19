@@ -7,7 +7,7 @@ use Illuminate\Support\Arr;
 trait Sortable
 {
     /**
-     * Build url in blade
+     * Build URL in blade
      *
      * @param string $column
      * @return string
@@ -22,7 +22,7 @@ trait Sortable
     }
 
     /**
-     * Get css class
+     * Get CSS class
      *
      * @param string $column
      * @return string
@@ -48,7 +48,7 @@ trait Sortable
      */
     protected function buildSortableUrl($order)
     {
-        return url()->current() . '?' . Arr::query(array_merge($this->query, ['order' => $order]));
+        return url()->current().'?'.Arr::query(array_merge($this->query, ['order' => $order]));
     }
 
     /**
@@ -59,6 +59,6 @@ trait Sortable
      */
     protected function isSortingBy($column)
     {
-        return Arr::get($this->query, 'order') == $column;
+        return Arr::get($this->query, 'order') === $column;
     }
 }

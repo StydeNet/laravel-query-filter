@@ -34,7 +34,7 @@ class FilterMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . '/Stubs/filter.stub';
+        return __DIR__ . '/stubs/filter.stub';
     }
 
     /**
