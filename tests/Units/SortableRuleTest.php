@@ -4,8 +4,8 @@ namespace Styde\QueryFilter\Tests\Units;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Styde\QueryFilter\Rules\SortableColumn;
-use Styde\QueryFilter\Tests\TestCase;
 use Styde\QueryFilter\Support\Sortable;
+use Styde\QueryFilter\Tests\TestCase;
 
 class SortableRuleTest extends TestCase
 {

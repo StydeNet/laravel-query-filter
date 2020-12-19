@@ -2,9 +2,9 @@
 
 namespace Styde\QueryFilter\Support;
 
-use Illuminate\Support\Str;
 use \Styde\QueryFilter\Concerns\Sortable as SortableConcern;
 use \Styde\QueryFilter\Contracts\Sortable as SortableContract;
+use Illuminate\Support\Str;
 
 class Sortable implements SortableContract
 {

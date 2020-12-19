@@ -3,8 +3,8 @@
 namespace Styde\QueryFilter\Tests\Units;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Styde\QueryFilter\Tests\TestCase;
 use Styde\QueryFilter\Support\Sortable as SortableSupport;
+use Styde\QueryFilter\Tests\TestCase;
 
 class SortableCollectionTest extends TestCase
 {

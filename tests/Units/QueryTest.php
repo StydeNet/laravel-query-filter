@@ -26,12 +26,14 @@ class QueryTest extends TestCase
         User::create(['name' => 'Duilio', 'email' => 'admin@styde.com']);
         User::create(['name' => 'styde support', 'email' => 'support@styde.com']);
 
-        $this->assertNotContains('luis@email.com',
+        $this->assertNotContains(
+            'luis@email.com',
             User::query()->filterByPrefixEmail('styde.com')
                 ->filterByOrName('styde')->get()->pluck('email')->toArray()
         );
 
-        $this->assertNotContains('Luis',
+        $this->assertNotContains(
+            'Luis',
             User::query()->filterByPrefixEmail('styde.com')
                 ->filterByOrName('styde')->get()->pluck('name')->toArray()
         );

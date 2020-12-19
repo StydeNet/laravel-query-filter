@@ -2,9 +2,9 @@
 
 namespace Styde\QueryFilter\Tests;
 
-use Styde\QueryFilter\QueryFilterServiceProvider;
 use Orchestra\Testbench\Concerns\WithLoadMigrationsFrom;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Styde\QueryFilter\QueryFilterServiceProvider;
 
 class TestCase extends Orchestra
 {

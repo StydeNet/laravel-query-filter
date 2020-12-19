@@ -17,11 +17,13 @@ class FilterTest extends TestCase
         User::create(['name' => 'Carlos', 'email' => 'carlos@email.com']);
         User::create(['name' => 'Andrés Luis', 'email' => 'LuisAndres@email.com']);
 
-        $this->assertContains('Luis',
+        $this->assertContains(
+            'Luis',
             User::query()->applyFilters(null, ['search' => 'Luis'])->get()->pluck('name')->toArray()
         );
 
-        $this->assertNotContains('Carlos',
+        $this->assertNotContains(
+            'Carlos',
             User::query()->applyFilters(null, ['search' => 'Luis'])->get()->pluck('name')->toArray()
         );
     }
