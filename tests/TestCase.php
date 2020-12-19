@@ -4,7 +4,7 @@ namespace Styde\QueryFilter\Tests;
 
 use Orchestra\Testbench\Concerns\WithLoadMigrationsFrom;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Styde\QueryFilter\QueryFilterServiceProvider;
+use Styde\QueryFilter\Providers\QueryFilterServiceProvider;
 
 class TestCase extends Orchestra
 {

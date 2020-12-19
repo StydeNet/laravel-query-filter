@@ -1,11 +1,12 @@
 <?php
 
-namespace Styde\QueryFilter;
+namespace Styde\QueryFilter\Providers;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\ServiceProvider;
 use Styde\QueryFilter\Commands\FilterMakeCommand;
 use Styde\QueryFilter\Commands\QueryMakeCommand;
+use Styde\QueryFilter\Overrides\LengthAwarePaginator as CustomLengthAwarePaginator;
 
 class QueryFilterServiceProvider extends ServiceProvider
 {
@@ -14,23 +15,18 @@ class QueryFilterServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*
-         * Optional methods to load your package assets
-         */
         if ($this->app->runningInConsole()) {
-            // Registering package commands.
             $this->commands([
                 FilterMakeCommand::class,
                 QueryMakeCommand::class,
             ]);
 
-            // Publishing config.
-            $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('query-filter.php'),
-            ], 'config');
+            $this->mergeConfigFrom($this->packageRoot('config/query-filter.php'), 'query-filter');
         }
 
-        $this->app->bind(LengthAwarePaginator::class, \Styde\QueryFilter\Overrides\LengthAwarePaginator::class);
+        $this->app->bind(LengthAwarePaginator::class, CustomLengthAwarePaginator::class);
+
+        $this->loadTranslationsFrom($this->packageRoot('resources/lang'), 'query-filter');
     }
 
     /**
@@ -38,6 +34,11 @@ class QueryFilterServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'query-filter');
+        //...
+    }
+
+    private function packageRoot(string $path): string
+    {
+        return __DIR__.'/../../'.$path;
     }
 }

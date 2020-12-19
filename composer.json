@@ -51,7 +51,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Styde\\QueryFilter\\QueryFilterServiceProvider"
+                "Styde\\QueryFilter\\Providers\\QueryFilterServiceProvider"
             ]
         }
     }
