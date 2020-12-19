@@ -1,6 +1,6 @@
 {
     "name": "styde/query-filter",
-    "description": "Apply filters to your queries using eloquent.",
+    "description": "Apply filters to your Laravel queries.",
     "keywords": [
         "query-filter",
         "laravel",
