@@ -1,4 +1,6 @@
-# Laravel Query Filter
+![StydeForm](./assets/styde-query-filter.jpg)
+
+# Query Filter
 
 ![](https://github.com/StydeNet/enlighten/workflows/run-tests/badge.svg)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/styde/laravel-query-filter.svg?style=flat-square)](https://packagist.org/packages/styde/laravel-query-filter)
@@ -12,7 +14,7 @@ Let your users filter your database queries in a safe and easy way.
 You can install the package via composer:
 
 ```bash
-composer require styde/laravel-query-filter
+composer require styde/query-filter
 ```
 
 ## Usage
@@ -39,7 +41,7 @@ This command will create a php file named User Query with the following structur
 
 namespace App\Queries;
 
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class UserQuery extends QueryBuilder
 {
@@ -60,7 +62,7 @@ This command will create a php file named User Filter with the following structu
 
 namespace App\Filters;
 
-use Styde\LaravelQueryFilter\AbstractFilter;
+use Styde\QueryFilter\AbstractFilter;
 
 class UserFilter extends AbstractFilter
 {
@@ -115,7 +117,7 @@ or
 namespace App\Models;
 
 use App\Filters\UserFilter;
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class User extends Authenticatable
 {
@@ -144,7 +146,7 @@ Once this is done, we are going to create a basic query filter and a basic query
 
 namespace App\Queries;
 
-use Styde\LaravelQueryFilter\QueryBuilder;
+use Styde\QueryFilter\QueryBuilder;
 
 class UserQuery extends QueryBuilder
 {
@@ -172,7 +174,7 @@ Normally the filters are applied when we make a list of records, commonly the in
 
 namespace App\Filters;
 
-use Styde\LaravelQueryFilter\AbstractFilter;
+use Styde\QueryFilter\AbstractFilter;
 
 class UserFilter extends AbstractFilter
 {
@@ -218,9 +220,15 @@ This way you are returning the filtered records.
 
 ###### Remember 
 
-* The filters that are applied are the ones passed by the rules in UserFilter, if you want to add more filters you must, put in rules the name of the input that arrives in the request, and create a function in your filter with the name of the input in camelCase.
+* The filters that are applied are the ones passed by the rules in UserFilter, 
+if you want to add more filters you must, put in rules the name of the input that 
+arrives in the request, and create a function in your filter with the name of the 
+input in camelCase.
 
-* If you have more than one class of filters for the same model, you can apply it from the controller passing it as dependency injection, even if you want to pass your own values you can do it by passing an array of key => value as the second parameter
+* If you have more than one class of filters for the same model, 
+you can apply it from the controller passing it as dependency injection,
+ even if you want to pass your own values you can do it 
+ by passing an array of key => value as the second parameter.
 
 Example
 
@@ -231,17 +239,30 @@ In your UserController
 
 namespace App\Http\Controllers;
 
+use Styde\QueryFilter\Support\Sortable;
+
 class UserController extends Controller
 {
     public function index()
     {
-        $otherData = [
-            // 
-        ];
+        $otherData = [...];
 
         $users = User::query()->applyFilters(new OtherUserFilter(), $otherData)->paginate();
 
         return view('users.index', compact('users'));
+    }
+
+    // If you want to use the sort functionality on a collection 
+    // and not on paginated data, 
+    // you need to inject or instantiate the sortable support class.
+
+    public function index(Sortable $sortable)
+    {
+        $otherData = [...];
+
+        $users = User::query()->applyFilters(new OtherUserFilter(), $otherData)->get();
+
+        return view('users.index', compact('users', 'sortable'));
     }
 }
 ```

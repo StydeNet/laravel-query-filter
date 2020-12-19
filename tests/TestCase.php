@@ -8,7 +8,7 @@ use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
-    use WithLoadMigrationsFrom;
+    use WithLoadMigrationsFrom, TestHelpers;
 
     /**
      * Setup the test environment.

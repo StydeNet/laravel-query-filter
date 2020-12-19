@@ -3,7 +3,7 @@
 namespace Styde\QueryFilter\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Styde\QueryFilter\Traits\Sortable;
+use Styde\QueryFilter\Support\Sortable;
 
 class SortableColumn implements Rule
 {

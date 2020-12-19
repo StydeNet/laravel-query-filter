@@ -1,34 +1,18 @@
 <?php
 
-namespace Styde\QueryFilter\Traits;
+namespace Styde\QueryFilter\Concerns;
 
 use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
 
 trait Sortable
 {
     /**
-     * Get the format order array
-     *
-     * @param $order string ColumnName
-     * @return array
-     */
-    public static function info(string $order)
-    {
-        if (Str::endsWith($order, '-desc')) {
-            return [Str::substr($order, 0, -5), 'desc'];
-        } else {
-            return [$order, 'asc'];
-        }
-    }
-
-    /**
      * Build url in blade
      *
-     * @param $column
+     * @param string $column
      * @return string
      */
-    public function sortUrl($column)
+    public function sortUrl(string $column): string
     {
         if ($this->isSortingBy($column)) {
             return $this->buildSortableUrl("{$column}-desc");
@@ -40,10 +24,10 @@ trait Sortable
     /**
      * Get css class
      *
-     * @param $column
+     * @param string $column
      * @return string
      */
-    public function classes($column)
+    public function classes(string $column): string
     {
         if ($this->isSortingBy($column)) {
             return config('query-filter.icons.up');

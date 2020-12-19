@@ -38,6 +38,6 @@ class QueryFilterServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Automatically apply the package configuration
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'query-filter');
     }
 }
