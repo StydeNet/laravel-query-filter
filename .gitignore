@@ -1,34 +1,7 @@
-build
-composer.lock
-docs
-vendor
-coverage
-.phpunit.result.cache
-
-# File-based project format
-*.iws
-
-# IntelliJ
-out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
-
-### JetBrains+all Patch ###
-# Ignores the whole .idea folder and all .iml files
-# See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
-
 .idea/
-*.iml
-modules.xml
-.idea/misc.xml
-*.ipr
+vendor/
+.phpunit.result.cache
+node_modules
+.php_cs.cache
+storage
+.env
